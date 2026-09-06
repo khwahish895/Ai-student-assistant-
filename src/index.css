@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-light: #F7F8FC;
+    --card-light: #FFFFFF;
+    --text-primary-light: #0B1033;
+    --text-muted-light: #64748B;
+    --border-light: #E2E8F0;
+
+    --brand-primary: #6D4CFF;
+    --brand-primary-hover: #5B3CE6;
+    --brand-cyan: #00D9FF;
+    --brand-cyan-hover: #00B8D9;
+    --brand-midnight: #030B2C;
+    --brand-navy: #07123F;
+    --brand-dark-purple: #0B1033;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-primary-light);
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  .dark body,
+  body.dark,
+  html.dark body {
+    background-color: #030B2C;
+    color: #F1F5F9;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(109, 76, 255, 0.25);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(109, 76, 255, 0.45);
+}
+
+/* Markdown typography styling */
+.prose-ai {
+  line-height: 1.65;
+}
+.prose-ai p {
+  margin-bottom: 0.75rem;
+}
+.prose-ai h1, .prose-ai h2, .prose-ai h3, .prose-ai h4 {
+  font-weight: 700;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+.prose-ai ul, .prose-ai ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.prose-ai li {
+  margin-bottom: 0.25rem;
+}
+.prose-ai code {
+  background-color: rgba(109, 76, 255, 0.1);
+  color: #6D4CFF;
+  padding: 0.15rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.875em;
+}
+.dark .prose-ai code {
+  background-color: rgba(0, 217, 255, 0.12);
+  color: #00D9FF;
+}
+.prose-ai pre {
+  background-color: #07123F;
+  color: #F8FAFC;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 0.75rem 0;
+  border: 1px solid #1E293B;
+}
+.prose-ai pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+.prose-ai blockquote {
+  border-left: 3px solid #6D4CFF;
+  padding-left: 1rem;
+  margin: 0.75rem 0;
+  font-style: italic;
+  opacity: 0.9;
+}
+
